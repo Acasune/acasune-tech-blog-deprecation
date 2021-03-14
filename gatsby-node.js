@@ -1,11 +1,13 @@
 const path = require(`path`)
+const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+  const tagTemplate = path.resolve(`./src/pages/tags.tsx`)
 
   // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPost = path.resolve(`./src/pages/blog-post.tsx`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
@@ -20,6 +22,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             fields {
               slug
             }
+          }
+        }
+        tags: allMarkdownRemark(limit: 1000) {
+          group(field: frontmatter___tags) {
+            fieldValue
           }
         }
       }
@@ -46,7 +53,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: post.fields.slug,
+        path: `${post.fields.slug}`,
         component: blogPost,
         context: {
           id: post.id,
@@ -56,6 +63,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  const tags = result.data.tags.group
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -95,6 +113,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Social {
       twitter: String
+      github: String
     }
 
     type MarkdownRemark implements Node {

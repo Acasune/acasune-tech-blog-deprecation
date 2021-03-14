@@ -1,17 +1,25 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Acasune-blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Acasune`,
+      summary: `:アカデミアで拗ねらせてた人の略です。今はそんなに拗ねらせてないです。`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `書きたいと思ったことを書いていきます。`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `acasune`,
+      github: `Acasune`,
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "process.env.GOOGLE_ANALYTICS_ID",
+        head: true,
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -46,17 +54,18 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`
+            }
+          }
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -112,19 +121,36 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Acasune Blog`,
+        short_name: `AcasuneBlog`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#2B2B2B`,
+        theme_color: `#287BDE`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/profile-pic.png`, // This path is relative to the root of the site.
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-mdx`,
+    //   options: {
+    //     extensions: [`.mdx`, `.md`],
+    //     gatsbyRemarkPlugins: [
+    //       // optional plugin if you want to use code syntax highlighting
+    //       // $ yarn add gatsby-transformer-remark gatsby-remark-prismjs prismjs
+    //       {
+    //         resolve: `gatsby-remark-prismjs`,
+    //         options: {
+    //           showLanguage: true,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-typegen`
   ],
 }

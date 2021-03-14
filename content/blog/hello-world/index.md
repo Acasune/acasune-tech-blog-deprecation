@@ -2,7 +2,10 @@
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
+tags: ['test']
 ---
+
+本記事は開発者(Acasune)がWebサイトの体裁等を確認するためのテストページです.
 
 This is my first post on my new fake blog! How exciting!
 

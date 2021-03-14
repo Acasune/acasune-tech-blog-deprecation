@@ -1,9 +1,13 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import _ from "lodash"
+import { AiFillTags } from "react-icons/ai";
+
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Tag from "../components/tag"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -11,7 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout >
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -23,8 +27,14 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <AiFillTags />
+          {post.frontmatter.tags.map(tag => {
+            return <Tag tag={tag} />
+          })}
           <p>{post.frontmatter.date}</p>
+
         </header>
+
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -83,8 +93,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
