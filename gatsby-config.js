@@ -130,22 +130,6 @@ module.exports = {
         icon: `src/images/profile-pic.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-mdx`,
-    //   options: {
-    //     extensions: [`.mdx`, `.md`],
-    //     gatsbyRemarkPlugins: [
-    //       // optional plugin if you want to use code syntax highlighting
-    //       // $ yarn add gatsby-transformer-remark gatsby-remark-prismjs prismjs
-    //       {
-    //         resolve: `gatsby-remark-prismjs`,
-    //         options: {
-    //           showLanguage: true,
-    //         },
-    //       },
-    //     ],
-    //   },
-    // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality

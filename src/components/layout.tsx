@@ -3,7 +3,6 @@ import { Link, graphql, useStaticQuery} from "gatsby"
 
 const Layout = ({ children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
 
   const { site } = useStaticQuery<{
     site: {
@@ -45,7 +44,7 @@ const Layout = ({ children }) => {
   // }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className="global-wrapper" >
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
