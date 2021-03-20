@@ -145,7 +145,7 @@ module.exports = {
         short_name: `AcasuneBlog`,
         start_url: `/`,
         background_color: `#2B2B2B`,
-        theme_color: `#287BDE`,
+        theme_color: `#2B2B2B`,
         display: `minimal-ui`,
         icon: `src/images/profile-pic.png`, // This path is relative to the root of the site.
       },

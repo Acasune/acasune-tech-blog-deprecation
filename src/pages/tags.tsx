@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
-import Bio from '../components/bio';
 import Layout from '../components/layout';
 import Post from '../components/post';
 import SEO from '../components/seo';
@@ -12,14 +11,12 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <SEO title={tag} />
-      <h2>You search: {tag}</h2>
+      <h2>You search: [{tag}]</h2>
       <ol style={{ listStyle: `none` }}>
         {data.allMarkdownRemark.edges.map(({ node }) => {
           return <Post post={node} />;
         })}
       </ol>
-      <hr />
-      <Bio />
     </Layout>
   );
 };

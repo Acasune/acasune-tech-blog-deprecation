@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { Link, graphql } from 'gatsby';
-import styled from '@emotion/styled';
+import { graphql } from 'gatsby';
 
-import Bio from '../components/bio';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Post from '../components/post';
@@ -38,8 +36,6 @@ const BlogIndex: React.FC<
           return <Post post={post} class="post-summary" />;
         })}
       </ol>
-      <hr />
-      <Bio />
     </Layout>
   );
 };
