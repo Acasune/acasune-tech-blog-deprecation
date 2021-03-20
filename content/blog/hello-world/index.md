@@ -1,11 +1,11 @@
 ---
 title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+date: '2015-05-01T22:12:03.284Z'
+description: 'Hello World'
 tags: ['test']
 ---
 
-本記事は開発者(Acasune)がWebサイトの体裁等を確認するためのテストページです.
+本記事は開発者(Acasune)が Web サイトの体裁等を確認するためのテストページです.
 
 This is my first post on my new fake blog! How exciting!
 
@@ -27,7 +27,7 @@ Oh, and here's a great quote from this Wikipedia on
 You can also write code blocks here!
 
 ```js
-const saltyDuckEgg = "chinese preserved food product"
+const saltyDuckEgg = 'chinese preserved food product';
 ```
 
 | Number | Title                                    | Year |
@@ -193,13 +193,13 @@ Paragraph:
 
     ---------------------------------------
 
-This is [an example](http://example.com "Example") link.
+This is [an example](http://example.com 'Example') link.
 
 [This link](http://example.com) has no title attr.
 
 This is [an example][id] reference-style link.
 
-[id]: http://example.com "Optional Title"
+[id]: http://example.com 'Optional Title'
 
     This is [an example](http://example.com "Example") link.
 
@@ -229,6 +229,6 @@ This paragraph has some `code` in it.
 
     This paragraph has some `code` in it.
 
-![Alt Text](https://placehold.it/200x50 "Image Title")
+![Alt Text](https://placehold.it/200x50 'Image Title')
 
     ![Alt Text](https://placehold.it/200x50 "Image Title")
