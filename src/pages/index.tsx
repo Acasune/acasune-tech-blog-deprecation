@@ -15,7 +15,7 @@ const BlogIndex: React.FC<
   if (posts.length === 0) {
     return (
       <Layout>
-        <SEO title="All posts" />
+        <SEO />
         <Bio />
         <p>
           No blog posts found. Add markdown posts to
@@ -29,7 +29,7 @@ const BlogIndex: React.FC<
 
   return (
     <Layout>
-      <SEO title="All posts" />
+      <SEO />
       <h2>All Posts</h2>
       <ol style={{ listStyle: `none` }}>
         {posts.map((post: any) => {
