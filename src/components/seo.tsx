@@ -38,7 +38,7 @@ const SEO = ({ description, lang, meta, title }) => {
       }}
       title={title}
       titleTemplate={
-        defaultTitle ? `%s | ${defaultTitle}` : null
+        title ? `%s | ${defaultTitle}` : defaultTitle
       }
       meta={[
         {
@@ -79,7 +79,7 @@ const SEO = ({ description, lang, meta, title }) => {
 };
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `ja`,
   meta: [],
   description: ``,
 };
