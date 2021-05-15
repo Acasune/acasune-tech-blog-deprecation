@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Post from '../components/post';
+import Bio from '../components/bio';
 
 const BlogIndex: React.FC<
   PageProps<GatsbyTypes.BlogIndexQuery>
@@ -29,7 +30,7 @@ const BlogIndex: React.FC<
 
   return (
     <Layout>
-      <SEO />
+      <SEO title={"Top"}/>
       <h2>All Posts</h2>
       <ol style={{ listStyle: `none` }}>
         {posts.map((post: any) => {
