@@ -3551,23 +3551,31 @@ type StaticImageSortInput = {
   readonly order: Maybe<ReadonlyArray<Maybe<SortOrderEnum>>>;
 };
 
-type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
+type usersawayatakumaProjectacasuneBlogsrccomponentsseoTsx2841359383QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type Unnamed_1_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
-type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type Unnamed_2_Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
+type usersawayatakumaProjectacasuneBlogsrccomponentsseoTsx2841359383Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
       Pick<SiteSiteMetadata, 'title' | 'description'>
       & { readonly social: Maybe<Pick<Social, 'twitter'>> }
     )> }> };
+
+type usersawayatakumaProjectacasuneBlogsrccomponentslayoutTsx3159585216QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type usersawayatakumaProjectacasuneBlogsrccomponentslayoutTsx3159585216Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
 type usersawayatakumaProjectacasuneBlogsrcpages404Tsx3159585216QueryVariables = Exact<{ [key: string]: never; }>;
 
 
 type usersawayatakumaProjectacasuneBlogsrcpages404Tsx3159585216Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
+type usersawayatakumaProjectacasuneBlogsrcpagesindexTsx862560315QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type usersawayatakumaProjectacasuneBlogsrcpagesindexTsx862560315Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<(
+      Pick<MarkdownRemark, 'excerpt'>
+      & { readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description' | 'tags'>> }
+    )> } };
 
 type BlogPostBySlugQueryVariables = Exact<{
   id: Maybe<Scalars['String']>;
@@ -3593,14 +3601,6 @@ type usersawayatakumaProjectacasuneBlogsrcpagestagsTsx1775080574Query = { readon
         & { readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'title' | 'date' | 'tags'>> }
       ) }> }
   ) };
-
-type usersawayatakumaProjectacasuneBlogsrcpagesindexTsx862560315QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type usersawayatakumaProjectacasuneBlogsrcpagesindexTsx862560315Query = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<(
-      Pick<MarkdownRemark, 'excerpt'>
-      & { readonly fields: Maybe<Pick<Fields, 'slug'>>, readonly frontmatter: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description' | 'tags'>> }
-    )> } };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
