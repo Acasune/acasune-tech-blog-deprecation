@@ -30,7 +30,7 @@ const BlogIndex: React.FC<
 
   return (
     <Layout>
-      <SEO title={"Top"}/>
+      <SEO title={"all post"}/>
       <h2>All Posts</h2>
       <ol style={{ listStyle: `none` }}>
         {posts.map((post: any) => {
