@@ -1,5 +1,5 @@
 ---
-title: 'nand2tetrisを完走した感想とお気持ち表明'
+title: '『nand2tetris』を完走した感想とお気持ち表明'
 date: '2021-05-15'
 description: 'nand2tetrisを完走した感想とお気持ち表明'
 tags: ['CPU','Assembler','Compiler','OS']
