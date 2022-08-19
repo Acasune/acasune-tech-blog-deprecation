@@ -35,10 +35,10 @@ const Layout = ({ children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-      <hr />
-      <Bio />
+        <hr />
+        <Bio />
         <p>
-          このサイトはGoogle Analyticsを使用しています。
+          このサイトはGoogle Analytics、Amazonのアソシエイトを使用しています。
           <a
             href="https://policies.google.com/technologies/partner-sites?hl=ja"
             target="_blank"
