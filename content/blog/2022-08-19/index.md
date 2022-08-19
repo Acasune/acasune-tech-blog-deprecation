@@ -1,11 +1,14 @@
 ﻿---
 title: '『TypeScriptとReact/Next.jsでつくる実践Webアプリケーション開発』を完走した感想 '
-date: '2022-08-22'
+date: '2022-08-19'
 description: '『TypeScriptとReact/Next.jsでつくる実践Webアプリケーション開発』を完走した感想 '
 tags: ['React','Next.js','TypeScript','書評']
 ---
 ## 書影
 [![Shoei](01.jpg)](https://amzn.to/3c2VCzi)
+
+## 実演の様子
+![04](04.gif)
 
 ## 読もうと思ったきっかけ
 作者のひとりが以前執筆に関わっていた『[Vue.js入門 基礎から実践アプリケーション開発まで](https://amzn.to/3ChhjX3)』という書籍が最高だったので、あの厳密さで書かれたReact, Next.jsの解説書がほしいとずっと思っていたから。
